@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>Admin Dashboard</h1>
+    <form action="/addquestion/" method="POST">
+        {% csrf_token %}
+    Question:<input type="text" name="question" required><br><br>
+    Option1:<input type="text" name="option1" required><br><br>
+    Option2:<input type="text" name="option2" required><br><br>
+    Option3:<input type="text" name="option3" required><br><br>
+    Option4:<input type="text" name="option4" required><br><br>
+    Answer:<input type="text" name="answer" required><br><br>
+    <input type="submit" value="Add Question" class="btn btn-success">
+    </form>
+  {{message}}
+
+</div>
+
+</body>
+</html>
